@@ -67,3 +67,24 @@ restartButton.addEventListener("click", function() {
 });
 
 
+const timerElement = document.getElementById("timer");
+
+let timer;
+
+startTimer();
+
+function startTimer() {
+    let timeLeft = 20;
+    timerElement.innerText = "Time Left : " + timeLeft;
+    timer = setInterval(function () {
+      timeLeft--;
+      timerElement.innerText = "Time Left : " + timeLeft;
+      if (timeLeft === 0) {
+        clearInterval(timer);
+        alert("You lose!");
+        reloadGame();
+      }
+    }, 1000);
+  }
+
+

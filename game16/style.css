@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+#timer {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
 #restartButton {
     padding: 10px 20px;
     margin: 24px;
