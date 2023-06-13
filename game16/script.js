@@ -56,6 +56,7 @@ function checkCell() {
         gameOver = true;
         setTimeout(function () {
             alert("TRY AGAIN :)");
+            location.reload();
         }, 1);
 
     }
@@ -86,7 +87,8 @@ function startTimer() {
             clearInterval(timer);
 
             setTimeout(function () {
-                alert("You lose!");
+                alert("You lose, try again :) ");
+                location.reload();
             }, 1);
 
         }
