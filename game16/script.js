@@ -7,7 +7,7 @@ for (let i = 1; i <= 16; i++) {
 
 let table = document.getElementById("dask");
 for (let i = 0; i < 4; i++) {
-    let row = table.insertRow(i);
+    var row = table.insertRow(i);
     for (let j = 0; j < 4; j++) {
         let cell = row.insertCell(j);
         cell.addEventListener("click", checkCell);
@@ -62,9 +62,12 @@ function checkCell() {
 }
 
 let restartButton = document.getElementById("restartButton");
-restartButton.addEventListener("click", function() {
-  location.reload();
+restartButton.addEventListener("click", function () {
+    location.reload();
+
 });
+
+
 
 
 const timerElement = document.getElementById("timer");
@@ -77,14 +80,17 @@ function startTimer() {
     let timeLeft = 20;
     timerElement.innerText = "Time Left : " + timeLeft;
     timer = setInterval(function () {
-      timeLeft--;
-      timerElement.innerText = "Time Left : " + timeLeft;
-      if (timeLeft === 0) {
-        clearInterval(timer);
-        alert("You lose!");
-        reloadGame();
-      }
+        timeLeft--;
+        timerElement.innerText = "Time Left : " + timeLeft;
+        if (timeLeft === 0) {
+            clearInterval(timer);
+
+            setTimeout(function () {
+                alert("You lose!");
+            }, 1);
+
+        }
     }, 1000);
-  }
+}
 
 
