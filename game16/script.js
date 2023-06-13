@@ -7,7 +7,7 @@ for (let i = 1; i <= 16; i++) {
 
 let table = document.getElementById("dask");
 for (let i = 0; i < 4; i++) {
-    var row = table.insertRow(i);
+    let row = table.insertRow(i);
     for (let j = 0; j < 4; j++) {
         let cell = row.insertCell(j);
         cell.addEventListener("click", checkCell);
