@@ -65,7 +65,6 @@ function checkCell() {
 let restartButton = document.getElementById("restartButton");
 restartButton.addEventListener("click", function () {
     location.reload();
-
 });
 
 
